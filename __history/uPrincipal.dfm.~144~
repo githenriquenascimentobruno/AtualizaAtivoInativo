@@ -1,0 +1,1345 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Principal - Atualiza'
+  ClientHeight = 651
+  ClientWidth = 908
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 64
+    Top = 3
+    Width = 33
+    Height = 13
+    Caption = 'C'#243'digo'
+  end
+  object Label2: TLabel
+    Left = 167
+    Top = 3
+    Width = 46
+    Height = 13
+    Caption = 'Descri'#231#227'o'
+  end
+  object Label3: TLabel
+    Left = 663
+    Top = 3
+    Width = 25
+    Height = 13
+    Caption = 'Ativo'
+  end
+  object Label4: TLabel
+    Left = 742
+    Top = 197
+    Width = 23
+    Height = 13
+    Caption = 'Data'
+  end
+  object Label5: TLabel
+    Left = 742
+    Top = 241
+    Width = 90
+    Height = 13
+    Caption = 'Tipo de Movimento'
+  end
+  object Label6: TLabel
+    Left = 742
+    Top = 282
+    Width = 89
+    Height = 13
+    Caption = 'Codigo do Produto'
+  end
+  object Label7: TLabel
+    Left = 742
+    Top = 328
+    Width = 56
+    Height = 13
+    Caption = 'Quantidade'
+  end
+  object Label8: TLabel
+    Left = 742
+    Top = 371
+    Width = 23
+    Height = 13
+    Caption = 'Nota'
+  end
+  object Label9: TLabel
+    Left = 64
+    Top = 100
+    Width = 26
+    Height = 13
+    Caption = 'Saldo'
+  end
+  object Label10: TLabel
+    Left = 742
+    Top = 414
+    Width = 41
+    Height = 13
+    Caption = 'Historico'
+  end
+  object Label11: TLabel
+    Left = 742
+    Top = 125
+    Width = 132
+    Height = 13
+    Caption = 'Maximo Codigo ENTRSAIDA'
+  end
+  object Label12: TLabel
+    Left = 742
+    Top = 162
+    Width = 122
+    Height = 13
+    Caption = 'Maximo Codigo ESTOQUE'
+  end
+  object edtCodigo: TEdit
+    Left = 64
+    Top = 16
+    Width = 97
+    Height = 21
+    TabOrder = 2
+    OnClick = edtCodigoClick
+    OnExit = edtCodigoExit
+    OnKeyPress = edtCodigoKeyPress
+  end
+  object edtDescricao: TEdit
+    Left = 167
+    Top = 16
+    Width = 490
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 4
+    OnKeyPress = edtDescricaoKeyPress
+  end
+  object edtAtivo: TEdit
+    Left = 663
+    Top = 16
+    Width = 73
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 5
+    Text = 'S'
+    OnKeyPress = edtAtivoKeyPress
+  end
+  object DBGrid1: TDBGrid
+    Left = 64
+    Top = 153
+    Width = 672
+    Height = 142
+    DataSource = dsAtualiza
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'P_ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'P_FANTASIA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_REFERENCIA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_PRODUTO'
+        Width = 500
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'P_APELIDO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_FABRICA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_MARCA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_COR'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_GRUPO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_CATEGORIA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_SUBCATEGORIA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_TIPO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_TAMANHO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_UNIDADE'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_MEDIDA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_DIAMETRO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_PESO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_BARRAS1'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_BARRAS2'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_LUCRO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_DESCONTO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_DATACADASTRO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_COMPRA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_ATIVO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'P_MASCULINO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_FEMININO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_UNISSEX'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_QTDEMINIMA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_CEST'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_NCM'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_CFOP'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_TRIBUTACAO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_ORIGEM'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_CSTPIS'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_GTINCOMERCIAL'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_GTINTRIBUTAVEL'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_APARECERSITE'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_TITULO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_HISTORICO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_IMPORTA'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_LIDO'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'P_ALTERADO'
+        Visible = False
+      end>
+  end
+  object btnIncluir: TButton
+    Left = 742
+    Top = 14
+    Width = 75
+    Height = 25
+    Caption = 'Incluir'
+    TabOrder = 7
+    OnClick = btnIncluirClick
+    OnExit = btnIncluirExit
+    OnKeyPress = btnIncluirKeyPress
+  end
+  object btnGravar: TButton
+    Left = 742
+    Top = 49
+    Width = 75
+    Height = 25
+    Caption = 'Incluir - EAN'
+    TabOrder = 8
+    OnClick = btnGravarClick
+    OnKeyPress = btnGravarKeyPress
+  end
+  object edtBarras: TEdit
+    Left = 64
+    Top = 48
+    Width = 97
+    Height = 21
+    TabOrder = 0
+    OnClick = edtBarrasClick
+    OnExit = edtBarrasExit
+    OnKeyPress = edtBarrasKeyPress
+  end
+  object edtDescricaoBarras: TEdit
+    Left = 167
+    Top = 49
+    Width = 490
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 9
+    OnKeyPress = edtDescricaoBarrasKeyPress
+  end
+  object edtAtivoBarras: TEdit
+    Left = 663
+    Top = 49
+    Width = 73
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 10
+    Text = 'S'
+    OnKeyPress = edtAtivoBarrasKeyPress
+  end
+  object edtSaldo: TEdit
+    Left = 64
+    Top = 117
+    Width = 97
+    Height = 21
+    TabOrder = 1
+    Text = '1'
+    OnExit = edtSaldoExit
+    OnKeyPress = edtSaldoKeyPress
+  end
+  object mskData: TMaskEdit
+    Left = 742
+    Top = 214
+    Width = 72
+    Height = 21
+    Color = clInfoBk
+    EditMask = '!99/99/0000;1;_'
+    MaxLength = 10
+    ReadOnly = True
+    TabOrder = 11
+    Text = '20/09/2022'
+  end
+  object edtTipoMovimento: TEdit
+    Left = 742
+    Top = 259
+    Width = 75
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 12
+    Text = '1'
+  end
+  object edtQuantidade: TEdit
+    Left = 742
+    Top = 344
+    Width = 75
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 13
+    Text = '1'
+  end
+  object edtNota: TEdit
+    Left = 742
+    Top = 387
+    Width = 75
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 14
+    Text = '0'
+  end
+  object edtCodigoProduto: TEdit
+    Left = 742
+    Top = 301
+    Width = 75
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 15
+  end
+  object edtHistorico: TEdit
+    Left = 742
+    Top = 427
+    Width = 75
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 16
+    Text = 'ENTRADA POR ACERTO DE ESTOQUE EM 20/09/2022'
+  end
+  object edtMaximoCodigo: TEdit
+    Left = 742
+    Top = 141
+    Width = 75
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 17
+  end
+  object Button1: TButton
+    Left = 742
+    Top = 94
+    Width = 75
+    Height = 25
+    Caption = 'Gravar'
+    TabOrder = 18
+  end
+  object edtMaximoCodigoEstoque: TEdit
+    Left = 742
+    Top = 175
+    Width = 75
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 19
+  end
+  object DBGrid2: TDBGrid
+    Left = 64
+    Top = 301
+    Width = 672
+    Height = 316
+    DataSource = dsContagem
+    TabOrder = 20
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object btnContagem: TButton
+    Left = 167
+    Top = 115
+    Width = 105
+    Height = 25
+    Caption = 'Incluir Contagem'
+    TabOrder = 3
+    OnClick = btnContagemClick
+  end
+  object btnGravarContagem: TButton
+    Left = 278
+    Top = 115
+    Width = 113
+    Height = 25
+    Caption = 'Gravar Contagem'
+    TabOrder = 21
+    OnClick = btnGravarContagemClick
+  end
+  object btnLimparLancamentos: TButton
+    Left = 397
+    Top = 115
+    Width = 137
+    Height = 25
+    Caption = 'Limpar Lan'#231'amentos'
+    TabOrder = 22
+    OnClick = btnLimparLancamentosClick
+  end
+  object edtCodigoSubcategoria: TEdit
+    Left = 64
+    Top = 75
+    Width = 97
+    Height = 21
+    TabOrder = 23
+  end
+  object edtDescricaoSubcategoria: TEdit
+    Left = 167
+    Top = 76
+    Width = 569
+    Height = 21
+    Color = clInfoBk
+    ReadOnly = True
+    TabOrder = 24
+  end
+  object conexaoBd: TSQLConnection
+    ConnectionName = 'SisFraldas'
+    DriverName = 'Firebird'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=Firebird'
+      'DriverUnit=Data.DBXFirebird'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver270.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=24.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXFirebirdMetaDataCommandFactory,DbxFire' +
+        'birdDriver270.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXFirebirdMetaDataCommandF' +
+        'actory,Borland.Data.DbxFirebirdDriver,Version=24.0.0.0,Culture=n' +
+        'eutral,PublicKeyToken=91d62ebb5b0d1b1b'
+      'LibraryName=dbxfb.dll'
+      'LibraryNameOsx=libsqlfb.dylib'
+      'VendorLib=fbclient.dll'
+      'VendorLibWin64=fbclient.dll'
+      'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
+      
+        'Database=lojadasfraldas.ddns.us:/bminfo/webapps/sisfraldas/bmfra' +
+        'ldas.fdb'
+      'User_Name=sysdba'
+      'Password=fraldas_'
+      'Role=RoleName'
+      'MaxBlobSize=-1'
+      'LocaleCode=0000'
+      'IsolationLevel=ReadCommitted'
+      'SQLDialect=3'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'TrimChar=False'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'RoleName=RoleName'
+      'ServerCharSet='
+      'Trim Char=False')
+    Connected = True
+    Left = 16
+    Top = 8
+  end
+  object sdsAtualiza: TSQLDataSet
+    Active = True
+    CommandText = 'select * from produtos'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = conexaoBd
+    Left = 16
+    Top = 64
+  end
+  object dspAtualiza: TDataSetProvider
+    DataSet = sdsAtualiza
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 16
+    Top = 120
+  end
+  object cdsAtualiza: TClientDataSet
+    Active = True
+    Aggregates = <>
+    CommandText = 'select * from produtos'
+    Params = <>
+    ProviderName = 'dspAtualiza'
+    Left = 16
+    Top = 176
+    object cdsAtualizaP_ID: TIntegerField
+      FieldName = 'P_ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object cdsAtualizaP_FANTASIA: TIntegerField
+      FieldName = 'P_FANTASIA'
+    end
+    object cdsAtualizaP_REFERENCIA: TStringField
+      FieldName = 'P_REFERENCIA'
+      Size = 25
+    end
+    object cdsAtualizaP_PRODUTO: TStringField
+      FieldName = 'P_PRODUTO'
+      Size = 120
+    end
+    object cdsAtualizaP_APELIDO: TIntegerField
+      FieldName = 'P_APELIDO'
+    end
+    object cdsAtualizaP_FABRICA: TStringField
+      FieldName = 'P_FABRICA'
+      Size = 25
+    end
+    object cdsAtualizaP_MARCA: TIntegerField
+      FieldName = 'P_MARCA'
+    end
+    object cdsAtualizaP_COR: TIntegerField
+      FieldName = 'P_COR'
+    end
+    object cdsAtualizaP_GRUPO: TIntegerField
+      FieldName = 'P_GRUPO'
+    end
+    object cdsAtualizaP_CATEGORIA: TIntegerField
+      FieldName = 'P_CATEGORIA'
+    end
+    object cdsAtualizaP_SUBCATEGORIA: TIntegerField
+      FieldName = 'P_SUBCATEGORIA'
+    end
+    object cdsAtualizaP_TIPO: TIntegerField
+      FieldName = 'P_TIPO'
+    end
+    object cdsAtualizaP_TAMANHO: TIntegerField
+      FieldName = 'P_TAMANHO'
+    end
+    object cdsAtualizaP_UNIDADE: TIntegerField
+      FieldName = 'P_UNIDADE'
+    end
+    object cdsAtualizaP_MEDIDA: TIntegerField
+      FieldName = 'P_MEDIDA'
+    end
+    object cdsAtualizaP_DIAMETRO: TIntegerField
+      FieldName = 'P_DIAMETRO'
+    end
+    object cdsAtualizaP_PESO: TIntegerField
+      FieldName = 'P_PESO'
+    end
+    object cdsAtualizaP_BARRAS1: TStringField
+      FieldName = 'P_BARRAS1'
+    end
+    object cdsAtualizaP_BARRAS2: TStringField
+      FieldName = 'P_BARRAS2'
+    end
+    object cdsAtualizaP_LUCRO: TFMTBCDField
+      FieldName = 'P_LUCRO'
+      Precision = 18
+      Size = 4
+    end
+    object cdsAtualizaP_DESCONTO: TIntegerField
+      FieldName = 'P_DESCONTO'
+    end
+    object cdsAtualizaP_DATACADASTRO: TDateField
+      FieldName = 'P_DATACADASTRO'
+    end
+    object cdsAtualizaP_COMPRA: TDateField
+      FieldName = 'P_COMPRA'
+    end
+    object cdsAtualizaP_ATIVO: TStringField
+      FieldName = 'P_ATIVO'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsAtualizaP_MASCULINO: TStringField
+      FieldName = 'P_MASCULINO'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsAtualizaP_FEMININO: TStringField
+      FieldName = 'P_FEMININO'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsAtualizaP_UNISSEX: TStringField
+      FieldName = 'P_UNISSEX'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsAtualizaP_QTDEMINIMA: TFMTBCDField
+      FieldName = 'P_QTDEMINIMA'
+      Precision = 18
+      Size = 2
+    end
+    object cdsAtualizaP_CEST: TStringField
+      FieldName = 'P_CEST'
+      Size = 7
+    end
+    object cdsAtualizaP_NCM: TStringField
+      FieldName = 'P_NCM'
+      Size = 8
+    end
+    object cdsAtualizaP_CFOP: TIntegerField
+      FieldName = 'P_CFOP'
+    end
+    object cdsAtualizaP_TRIBUTACAO: TStringField
+      FieldName = 'P_TRIBUTACAO'
+      FixedChar = True
+      Size = 3
+    end
+    object cdsAtualizaP_ORIGEM: TStringField
+      FieldName = 'P_ORIGEM'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsAtualizaP_CSTPIS: TStringField
+      FieldName = 'P_CSTPIS'
+      FixedChar = True
+      Size = 2
+    end
+    object cdsAtualizaP_GTINCOMERCIAL: TStringField
+      FieldName = 'P_GTINCOMERCIAL'
+      Size = 14
+    end
+    object cdsAtualizaP_GTINTRIBUTAVEL: TStringField
+      FieldName = 'P_GTINTRIBUTAVEL'
+      Size = 14
+    end
+    object cdsAtualizaP_APARECERSITE: TStringField
+      FieldName = 'P_APARECERSITE'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsAtualizaP_TITULO: TStringField
+      FieldName = 'P_TITULO'
+      Size = 120
+    end
+    object cdsAtualizaP_HISTORICO: TStringField
+      FieldName = 'P_HISTORICO'
+      Size = 5000
+    end
+    object cdsAtualizaP_IMPORTA: TIntegerField
+      FieldName = 'P_IMPORTA'
+    end
+    object cdsAtualizaP_LIDO: TStringField
+      FieldName = 'P_LIDO'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsAtualizaP_ALTERADO: TStringField
+      FieldName = 'P_ALTERADO'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object queryAtualiza: TSQLQuery
+    Active = True
+    DataSource = dsAtualizaNovoStatus
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from produtos')
+    SQLConnection = conexaoBd
+    Left = 24
+    Top = 288
+    object queryAtualizaP_ID: TIntegerField
+      FieldName = 'P_ID'
+      Required = True
+    end
+    object queryAtualizaP_FANTASIA: TIntegerField
+      FieldName = 'P_FANTASIA'
+    end
+    object queryAtualizaP_REFERENCIA: TStringField
+      FieldName = 'P_REFERENCIA'
+      Size = 25
+    end
+    object queryAtualizaP_PRODUTO: TStringField
+      FieldName = 'P_PRODUTO'
+      Size = 120
+    end
+    object queryAtualizaP_APELIDO: TIntegerField
+      FieldName = 'P_APELIDO'
+    end
+    object queryAtualizaP_FABRICA: TStringField
+      FieldName = 'P_FABRICA'
+      Size = 25
+    end
+    object queryAtualizaP_MARCA: TIntegerField
+      FieldName = 'P_MARCA'
+    end
+    object queryAtualizaP_COR: TIntegerField
+      FieldName = 'P_COR'
+    end
+    object queryAtualizaP_GRUPO: TIntegerField
+      FieldName = 'P_GRUPO'
+    end
+    object queryAtualizaP_CATEGORIA: TIntegerField
+      FieldName = 'P_CATEGORIA'
+    end
+    object queryAtualizaP_SUBCATEGORIA: TIntegerField
+      FieldName = 'P_SUBCATEGORIA'
+    end
+    object queryAtualizaP_TIPO: TIntegerField
+      FieldName = 'P_TIPO'
+    end
+    object queryAtualizaP_TAMANHO: TIntegerField
+      FieldName = 'P_TAMANHO'
+    end
+    object queryAtualizaP_UNIDADE: TIntegerField
+      FieldName = 'P_UNIDADE'
+    end
+    object queryAtualizaP_MEDIDA: TIntegerField
+      FieldName = 'P_MEDIDA'
+    end
+    object queryAtualizaP_DIAMETRO: TIntegerField
+      FieldName = 'P_DIAMETRO'
+    end
+    object queryAtualizaP_PESO: TIntegerField
+      FieldName = 'P_PESO'
+    end
+    object queryAtualizaP_BARRAS1: TStringField
+      FieldName = 'P_BARRAS1'
+    end
+    object queryAtualizaP_BARRAS2: TStringField
+      FieldName = 'P_BARRAS2'
+    end
+    object queryAtualizaP_LUCRO: TFMTBCDField
+      FieldName = 'P_LUCRO'
+      Precision = 18
+      Size = 4
+    end
+    object queryAtualizaP_DESCONTO: TIntegerField
+      FieldName = 'P_DESCONTO'
+    end
+    object queryAtualizaP_DATACADASTRO: TDateField
+      FieldName = 'P_DATACADASTRO'
+    end
+    object queryAtualizaP_COMPRA: TDateField
+      FieldName = 'P_COMPRA'
+    end
+    object queryAtualizaP_ATIVO: TStringField
+      FieldName = 'P_ATIVO'
+      FixedChar = True
+      Size = 1
+    end
+    object queryAtualizaP_MASCULINO: TStringField
+      FieldName = 'P_MASCULINO'
+      FixedChar = True
+      Size = 1
+    end
+    object queryAtualizaP_FEMININO: TStringField
+      FieldName = 'P_FEMININO'
+      FixedChar = True
+      Size = 1
+    end
+    object queryAtualizaP_UNISSEX: TStringField
+      FieldName = 'P_UNISSEX'
+      FixedChar = True
+      Size = 1
+    end
+    object queryAtualizaP_QTDEMINIMA: TFMTBCDField
+      FieldName = 'P_QTDEMINIMA'
+      Precision = 18
+      Size = 2
+    end
+    object queryAtualizaP_CEST: TStringField
+      FieldName = 'P_CEST'
+      Size = 7
+    end
+    object queryAtualizaP_NCM: TStringField
+      FieldName = 'P_NCM'
+      Size = 8
+    end
+    object queryAtualizaP_CFOP: TIntegerField
+      FieldName = 'P_CFOP'
+    end
+    object queryAtualizaP_TRIBUTACAO: TStringField
+      FieldName = 'P_TRIBUTACAO'
+      FixedChar = True
+      Size = 3
+    end
+    object queryAtualizaP_ORIGEM: TStringField
+      FieldName = 'P_ORIGEM'
+      FixedChar = True
+      Size = 1
+    end
+    object queryAtualizaP_CSTPIS: TStringField
+      FieldName = 'P_CSTPIS'
+      FixedChar = True
+      Size = 2
+    end
+    object queryAtualizaP_GTINCOMERCIAL: TStringField
+      FieldName = 'P_GTINCOMERCIAL'
+      Size = 14
+    end
+    object queryAtualizaP_GTINTRIBUTAVEL: TStringField
+      FieldName = 'P_GTINTRIBUTAVEL'
+      Size = 14
+    end
+    object queryAtualizaP_APARECERSITE: TStringField
+      FieldName = 'P_APARECERSITE'
+      FixedChar = True
+      Size = 1
+    end
+    object queryAtualizaP_TITULO: TStringField
+      FieldName = 'P_TITULO'
+      Size = 120
+    end
+    object queryAtualizaP_HISTORICO: TStringField
+      FieldName = 'P_HISTORICO'
+      Size = 5000
+    end
+    object queryAtualizaP_IMPORTA: TIntegerField
+      FieldName = 'P_IMPORTA'
+    end
+    object queryAtualizaP_LIDO: TStringField
+      FieldName = 'P_LIDO'
+      FixedChar = True
+      Size = 1
+    end
+    object queryAtualizaP_ALTERADO: TStringField
+      FieldName = 'P_ALTERADO'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object cdsAtualizaNovoStatus: TClientDataSet
+    PersistDataPacket.Data = {
+      620000009619E0BD010000001800000003000000000003000000620006636F64
+      69676F04000100000000000964657363726963616F0200490000000100055749
+      44544802000200FF000673746174757301004900000001000557494454480200
+      02000A000000}
+    Active = True
+    Aggregates = <>
+    Params = <>
+    Left = 864
+    Top = 8
+    object cdsAtualizaNovoStatuscodigo: TIntegerField
+      FieldName = 'codigo'
+    end
+    object cdsAtualizaNovoStatusdescricao: TStringField
+      FieldName = 'descricao'
+      Size = 255
+    end
+    object cdsAtualizaNovoStatusstatus: TStringField
+      FieldName = 'status'
+      Size = 10
+    end
+  end
+  object dsAtualizaNovoStatus: TDataSource
+    DataSet = cdsAtualizaNovoStatus
+    Left = 864
+    Top = 64
+  end
+  object dsAtualiza: TDataSource
+    DataSet = cdsAtualiza
+    Left = 16
+    Top = 232
+  end
+  object sdsEstoque: TSQLDataSet
+    Active = True
+    CommandText = 'select * from estoque'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = conexaoBd
+    Left = 848
+    Top = 184
+  end
+  object dspEstoque: TDataSetProvider
+    DataSet = sdsEstoque
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 848
+    Top = 248
+  end
+  object cdsEstoque: TClientDataSet
+    Active = True
+    Aggregates = <>
+    CommandText = 'select * from estoque'
+    Params = <>
+    ProviderName = 'dspEstoque'
+    OnNewRecord = cdsEstoqueNewRecord
+    Left = 848
+    Top = 312
+    object cdsEstoqueE_CODIGO: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'E_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object cdsEstoqueE_DTMOVIMENTO: TDateField
+      FieldName = 'E_DTMOVIMENTO'
+    end
+    object cdsEstoqueE_TMOVIMENTO: TStringField
+      FieldName = 'E_TMOVIMENTO'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsEstoqueE_CODPRODUTO: TIntegerField
+      FieldName = 'E_CODPRODUTO'
+    end
+    object cdsEstoqueE_QTDE: TFMTBCDField
+      FieldName = 'E_QTDE'
+      Precision = 18
+      Size = 2
+    end
+    object cdsEstoqueE_NRNOTA: TIntegerField
+      FieldName = 'E_NRNOTA'
+    end
+    object cdsEstoqueE_SALDO: TFMTBCDField
+      FieldName = 'E_SALDO'
+      Precision = 18
+      Size = 2
+    end
+    object cdsEstoqueE_HISTORICO: TStringField
+      FieldName = 'E_HISTORICO'
+      Size = 1000
+    end
+    object cdsEstoqueE_FORNECEDOR: TIntegerField
+      FieldName = 'E_FORNECEDOR'
+    end
+  end
+  object dsEstoque: TDataSource
+    DataSet = cdsEstoque
+    Left = 848
+    Top = 368
+  end
+  object sdsEntradaSaida: TSQLDataSet
+    Active = True
+    CommandText = 'select * from entrsaida'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = conexaoBd
+    Left = 848
+    Top = 432
+  end
+  object dspEntradaSaida: TDataSetProvider
+    DataSet = sdsEntradaSaida
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 848
+    Top = 488
+  end
+  object cdsEntradaSaida: TClientDataSet
+    Active = True
+    Aggregates = <>
+    CommandText = 'select * from entrsaida'
+    Params = <>
+    ProviderName = 'dspEntradaSaida'
+    OnNewRecord = cdsEntradaSaidaNewRecord
+    Left = 848
+    Top = 544
+    object cdsEntradaSaidaES_CODIGO: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ES_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object cdsEntradaSaidaES_DTMOVIMENTO: TDateField
+      FieldName = 'ES_DTMOVIMENTO'
+    end
+    object cdsEntradaSaidaES_DTDEVOLUCAO: TDateField
+      FieldName = 'ES_DTDEVOLUCAO'
+    end
+    object cdsEntradaSaidaES_TMOVIMENTO: TStringField
+      FieldName = 'ES_TMOVIMENTO'
+      FixedChar = True
+      Size = 1
+    end
+    object cdsEntradaSaidaES_CODPRODUTO: TIntegerField
+      FieldName = 'ES_CODPRODUTO'
+    end
+    object cdsEntradaSaidaES_QTDE: TFMTBCDField
+      FieldName = 'ES_QTDE'
+      Precision = 18
+      Size = 2
+    end
+    object cdsEntradaSaidaES_NRNOTA: TIntegerField
+      FieldName = 'ES_NRNOTA'
+    end
+    object cdsEntradaSaidaES_SALDO: TFMTBCDField
+      FieldName = 'ES_SALDO'
+      Precision = 18
+      Size = 2
+    end
+    object cdsEntradaSaidaES_HISTORICO: TStringField
+      FieldName = 'ES_HISTORICO'
+      Size = 1000
+    end
+    object cdsEntradaSaidaES_FORNECEDOR: TIntegerField
+      FieldName = 'ES_FORNECEDOR'
+    end
+  end
+  object dsEntradaSaida: TDataSource
+    DataSet = cdsEntradaSaida
+    Left = 856
+    Top = 600
+  end
+  object cdsContagem: TClientDataSet
+    Active = True
+    Aggregates = <>
+    CommandText = 'select * from ENTRSAIDA'
+    Params = <>
+    ProviderName = 'dspContagem'
+    OnNewRecord = cdsContagemNewRecord
+    Left = 472
+    Top = 328
+    object cdsContagemES_CODIGO: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'ES_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object cdsContagemES_DTMOVIMENTO: TDateField
+      FieldName = 'ES_DTMOVIMENTO'
+    end
+    object cdsContagemES_TMOVIMENTO: TStringField
+      FieldName = 'ES_TMOVIMENTO'
+      Size = 2
+    end
+    object cdsContagemES_CODPRODUTO: TIntegerField
+      FieldName = 'ES_CODPRODUTO'
+    end
+    object cdsContagemES_QTDE: TFMTBCDField
+      FieldName = 'ES_QTDE'
+      Precision = 18
+      Size = 2
+    end
+    object cdsContagemES_NRNOTA: TIntegerField
+      FieldName = 'ES_NRNOTA'
+    end
+    object cdsContagemES_SALDO: TIntegerField
+      FieldName = 'ES_SALDO'
+    end
+    object cdsContagemES_HISTORICO: TStringField
+      FieldName = 'ES_HISTORICO'
+      Size = 100
+    end
+    object cdsContagemE_CODIGO: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'E_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object cdsContagemE_DTMOVIMENTO: TDateField
+      FieldName = 'E_DTMOVIMENTO'
+    end
+    object cdsContagemE_TMOVIMENTO: TStringField
+      FieldName = 'E_TMOVIMENTO'
+      Size = 2
+    end
+    object cdsContagemE_CODPRODUTO: TIntegerField
+      FieldName = 'E_CODPRODUTO'
+    end
+    object cdsContagemE_QTDE: TFMTBCDField
+      FieldName = 'E_QTDE'
+      Precision = 18
+      Size = 2
+    end
+    object cdsContagemE_NRNOTA: TIntegerField
+      FieldName = 'E_NRNOTA'
+    end
+    object cdsContagemE_SALDO: TIntegerField
+      FieldName = 'E_SALDO'
+    end
+    object cdsContagemE_HISTORICO: TStringField
+      FieldName = 'E_HISTORICO'
+      Size = 100
+    end
+  end
+  object dsContagem: TDataSource
+    DataSet = cdsContagem
+    Left = 544
+    Top = 328
+  end
+  object sdsContagem: TSQLDataSet
+    Active = True
+    CommandText = 'select * from ENTRSAIDA'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = conexaoBdContagem
+    Left = 272
+    Top = 328
+  end
+  object dspContagem: TDataSetProvider
+    DataSet = sdsContagem
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 368
+    Top = 328
+  end
+  object conexaoBdContagem: TSQLConnection
+    ConnectionName = 'Atualiza-Estoque'
+    DriverName = 'Firebird'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=Firebird'
+      'DriverUnit=Data.DBXFirebird'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver270.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=24.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXFirebirdMetaDataCommandFactory,DbxFire' +
+        'birdDriver270.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXFirebirdMetaDataCommandF' +
+        'actory,Borland.Data.DbxFirebirdDriver,Version=24.0.0.0,Culture=n' +
+        'eutral,PublicKeyToken=91d62ebb5b0d1b1b'
+      'LibraryName=dbxfb.dll'
+      'LibraryNameOsx=libsqlfb.dylib'
+      'VendorLib=fbclient.dll'
+      'VendorLibWin64=fbclient.dll'
+      'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
+      
+        'Database=C:\Desenvolvimento\AtualizaAtivoInativo\banco\atualizae' +
+        'stoque.fdb'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'Role=RoleName'
+      'MaxBlobSize=-1'
+      'LocaleCode=0000'
+      'IsolationLevel=ReadCommitted'
+      'SQLDialect=3'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'TrimChar=False'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'RoleName=RoleName'
+      'ServerCharSet='
+      'Trim Char=False')
+    Connected = True
+    Left = 160
+    Top = 328
+  end
+  object sdsGenerator: TSQLDataSet
+    Active = True
+    CommandText = 'SELECT GEN_ID(GEN_ENTRSAIDA_ID, 1) FROM RDB$DATABASE'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = conexaoBdContagem
+    Left = 272
+    Top = 400
+    object sdsGeneratorGEN_ID: TLargeintField
+      FieldName = 'GEN_ID'
+    end
+  end
+  object sdsGeneratorEstoque: TSQLDataSet
+    Active = True
+    CommandText = 'SELECT GEN_ID(GEN_ESTOQUE_ID, 1) FROM RDB$DATABASE'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = conexaoBdContagem
+    Left = 408
+    Top = 400
+    object sdsGeneratorEstoqueGEN_ID: TLargeintField
+      FieldName = 'GEN_ID'
+    end
+  end
+  object sdsEntrSaidaGen: TSQLDataSet
+    Active = True
+    CommandText = 'SELECT GEN_ID(GEN_ENTRSAIDA_ID, 1) FROM RDB$DATABASE'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = conexaoBd
+    Left = 136
+    Top = 168
+    object sdsEntrSaidaGenGEN_ID: TLargeintField
+      FieldName = 'GEN_ID'
+    end
+  end
+  object sdsEstoqueGen: TSQLDataSet
+    Active = True
+    CommandText = 'SELECT GEN_ID(GEN_ESTOQUE_ID, 1) FROM RDB$DATABASE'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = conexaoBd
+    Left = 584
+    Top = 160
+    object sdsEstoqueGenGEN_ID: TLargeintField
+      FieldName = 'GEN_ID'
+    end
+  end
+  object qryDeletarContagem: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from entrsaida')
+    SQLConnection = conexaoBdContagem
+    Left = 536
+    Top = 408
+  end
+  object qrySubcategoria: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from subcategoria')
+    SQLConnection = conexaoBd
+    Left = 552
+    Top = 472
+  end
+end
